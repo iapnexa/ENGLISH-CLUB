@@ -1,4 +1,4 @@
-const CACHE = 'flowtalk-v6';
+const CACHE = 'flowtalk-reference-v7';
 const ASSETS = [
   './',
   './index.html',

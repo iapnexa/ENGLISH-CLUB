@@ -15,23 +15,37 @@
 </head>
 <body>
 
-<header class="site-header reference-header">
+<header class="site-header">
   <div class="container top-bar">
     <div class="inst-brand">
       <img src="./assets/sonatrach-mark.png" alt="Sonatrach">
-      <div><div class="t1">Institut Algérien du Pétrole</div><div class="t2">Hassi Messaoud</div></div>
+      <div>
+        <div class="t1">Institut Algérien du Pétrole</div>
+        <div class="t2">Hassi Messaoud</div>
+      </div>
     </div>
+
     <nav class="nav-links" aria-label="Navigation principale">
-      <a href="#about">À propos</a><a href="#activities">Activités</a><a href="#events">Événements</a>
-      <a href="trainers.html">Formation</a><a href="#poll">Sondage</a><a href="#join">Rejoindre</a>
+      <a href="#about">À propos</a>
+      <a href="#activities">Activités</a>
+      <a href="#events">Événements</a>
+      <a href="trainers.html">Formation Formateurs</a>
+      <a href="#poll">Sondage</a>
+      <a href="#join">Rejoindre</a>
     </nav>
-    <div class="nav-actions"><div id="authSlot"></div><button class="icon-btn" id="themeToggle" title="Dark / Light">🌙</button><button class="burger" id="burgerBtn" aria-label="Menu">☰</button></div>
+
+    <div class="nav-actions">
+      <div id="authSlot"></div>
+      <button class="icon-btn" id="themeToggle" title="Dark / Light">🌙</button>
+      <button class="icon-btn" id="installBtn" title="Installer l'application" style="display:none;">⬇️</button>
+      <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
+    </div>
   </div>
 </header>
 
 <main>
   <!-- ============== الهيرو ============== -->
-  <section class="hero reference-hero">
+  <section class="hero">
     <div class="container hero-grid">
       <div>
         <div class="club-logo-row">
@@ -51,6 +65,20 @@
       <div class="hero-visual">
         <img src="./assets/hero-scene.svg" alt="">
       </div>
+    </div>
+  </section>
+
+  <!-- ============== بانر برنامج تدريب المدربين ============== -->
+  <section style="padding:0 0 20px;">
+    <div class="container">
+      <a href="trainers.html" class="dark-card" id="trainerPromo" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; text-decoration:none;">
+        <div class="ic" style="width:52px; height:52px; font-size:22px; flex-shrink:0;">🎓</div>
+        <div style="flex:1; min-width:220px;">
+          <h3 id="trainerPromoTitle" style="margin-bottom:4px;">Nouveau : Programme de Formation des Formateurs</h3>
+          <p id="trainerPromoDesc" style="margin:0; color:#C7CBD6;">English for Trainers — un parcours dédié aux formateurs des autres matières de l'IAP pour renforcer leur anglais pédagogique.</p>
+        </div>
+        <span class="btn btn-primary" id="trainerPromoBtn" style="flex-shrink:0;">Découvrir le programme →</span>
+      </a>
     </div>
   </section>
 
