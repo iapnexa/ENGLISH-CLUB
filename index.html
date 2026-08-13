@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAP FlowTalk English Club</title>
+<meta name="description" content="Speak · Learn · Connect · Grow — Le club d'anglais de l'Institut Algérien du Pétrole, Hassi Messaoud.">
+<meta name="theme-color" content="#0D1420">
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./assets/flowtalk-logo.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/main.css?v=6">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container top-bar">
+    <div class="inst-brand">
+      <img src="./assets/sonatrach-mark.png" alt="Sonatrach">
+      <div>
+        <div class="t1">Institut Algérien du Pétrole</div>
+        <div class="t2">Hassi Messaoud</div>
+      </div>
+    </div>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#about">À propos</a>
+      <a href="#activities">Activités</a>
+      <a href="#events">Événements</a>
+      <a href="trainers.html">Formation Formateurs</a>
+      <a href="#poll">Sondage</a>
+      <a href="#join">Rejoindre</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div id="authSlot"></div>
+      <button class="icon-btn" id="themeToggle" title="Dark / Light">🌙</button>
+      <button class="icon-btn" id="installBtn" title="Installer l'application" style="display:none;">⬇️</button>
+      <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============== الهيرو ============== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="club-logo-row">
+          <img src="./assets/flowtalk-logo.jpeg" alt="IAP FlowTalk English Club">
+        </div>
+        <div class="tagline-row">Speak <b>·</b> Learn <b>·</b> Connect <b>·</b> Grow</div>
+        <h1 class="hero-title">Where oil flows, <span class="accent">ideas flow.</span></h1>
+        <p style="color:var(--dim); margin-top:14px; max-width:480px; font-size:15px;">
+          IAP FlowTalk English Club est un espace dédié aux stagiaires et au personnel de l'IAP pour pratiquer l'anglais, partager des idées et grandir ensemble.
+        </p>
+        <div class="hero-actions">
+          <a href="#join" class="btn btn-primary">Rejoignez-nous !</a>
+          <a href="#activities" class="btn btn-ghost">Découvrir les activités</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="./assets/hero-scene.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== بانر برنامج تدريب المدربين ============== -->
+  <section style="padding:0 0 20px;">
+    <div class="container">
+      <a href="trainers.html" class="dark-card" id="trainerPromo" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; text-decoration:none;">
+        <div class="ic" style="width:52px; height:52px; font-size:22px; flex-shrink:0;">🎓</div>
+        <div style="flex:1; min-width:220px;">
+          <h3 id="trainerPromoTitle" style="margin-bottom:4px;">Nouveau : Programme de Formation des Formateurs</h3>
+          <p id="trainerPromoDesc" style="margin:0; color:#C7CBD6;">English for Trainers — un parcours dédié aux formateurs des autres matières de l'IAP pour renforcer leur anglais pédagogique.</p>
+        </div>
+        <span class="btn btn-primary" id="trainerPromoBtn" style="flex-shrink:0;">Découvrir le programme →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============== لوحة النادي الرئيسية ============== -->
+  <section class="dashboard">
+    <div class="container dash-grid">
+
+      <!-- === العمود الأيسر === -->
+      <div class="col">
+        <div class="dark-card" id="about">
+          <h3><span class="ic">👥</span> À propos du Club</h3>
+          <p>IAP FlowTalk English Club est un espace dédié aux stagiaires et au personnel de l'IAP pour pratiquer l'anglais, partager des idées et grandir ensemble.</p>
+          <ul class="check-list">
+            <li>Améliorer votre expression en anglais</li>
+            <li>Développer votre confiance</li>
+            <li>Échanger et collaborer</li>
+            <li>Préparer votre avenir professionnel</li>
+          </ul>
+          <a href="#join" class="btn btn-primary btn-block">Rejoignez-nous !</a>
+        </div>
+
+        <div class="panel" id="weeklyTopicPanel">
+          <div class="panel-head"><h3>💬 Sujet de la Semaine</h3></div>
+          <p style="color:var(--dim); font-size:13px;">Chargement…</p>
+        </div>
+
+        <div class="panel" id="events">
+          <div class="panel-head">
+            <h3><span class="ic">📅</span> Prochains Événements</h3>
+            <a href="#" class="view-all">Voir tout</a>
+          </div>
+          <div id="eventsList">
+            <div class="event-row">
+              <div class="event-date"><b>27</b><span>Juin</span></div>
+              <div class="event-info">
+                <h4>FlowTalk Opening Session</h4>
+                <p>Get to know the club &amp; icebreaker activities</p>
+                <span class="time">15:00 – 17:00</span>
+              </div>
+            </div>
+            <div class="event-row">
+              <div class="event-date"><b>04</b><span>Juil.</span></div>
+              <div class="event-info">
+                <h4>Speak &amp; Share</h4>
+                <p>Talk about your field in English</p>
+                <span class="time">15:00 – 17:00</span>
+              </div>
+            </div>
+            <div class="event-row">
+              <div class="event-date"><b>11</b><span>Juil.</span></div>
+              <div class="event-info">
+                <h4>Energy Debates</h4>
+                <p>Debate. Defend. Grow.</p>
+                <span class="time">15:00 – 17:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Nos Valeurs</h3></div>
+          <div class="values-row">
+            <div class="value-item"><div class="ic">💬</div><span>Speak</span><small>confiance</small></div>
+            <div class="value-item"><div class="ic">📘</div><span>Learn</span><small>every day</small></div>
+            <div class="value-item"><div class="ic">🤝</div><span>Connect</span><small>with others</small></div>
+            <div class="value-item"><div class="ic">📈</div><span>Grow</span><small>together</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === العمود الأوسط === -->
+      <div class="col" id="activities">
+        <div class="panel">
+          <div class="panel-head"><h3><span class="ic">✨</span> Nos Activités</h3></div>
+          <div class="activities-grid" id="activitiesGrid"></div>
+
+          <div class="panel" id="lessonsPanel" style="margin-top:22px; box-shadow:none; padding:0;">
+            <div class="panel-head"><h3>📚 Dernières Leçons</h3></div>
+            <div id="lessonsList"><p style="color:var(--dim); font-size:13px;">Chargement…</p></div>
+          </div>
+
+          <div class="challenge-card">
+            <div>
+              <h3>🏆 Challenge of the Month</h3>
+              <p>Take the challenge, win the badge!</p>
+            </div>
+            <div class="badge-row">
+              <div class="badge-circle">⭐</div>
+              <div class="badge-circle">🔥</div>
+              <div class="badge-circle">💡</div>
+              <div class="badge-circle">🏆</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === العمود الأيمن === -->
+      <div class="col">
+        <div class="panel" id="join">
+          <div class="panel-head"><h3>Rejoignez l'aventure !</h3></div>
+          <div class="link-list">
+            <a class="link-row" href="#"><span class="ic">👤</span><div><h4>Become a Member</h4><p>Inscrivez-vous au club</p></div><span class="arrow">›</span></a>
+            <a class="link-row" href="#"><span class="ic">💡</span><div><h4>Suggest a Topic</h4><p>Proposez un sujet de discussion</p></div><span class="arrow">›</span></a>
+            <a class="link-row" href="#"><span class="ic">🙋</span><div><h4>Volunteer</h4><p>Participez à l'organisation</p></div><span class="arrow">›</span></a>
+            <a class="link-row" href="#"><span class="ic">✳️</span><div><h4>Share Your Idea</h4><p>Votre idée peut inspirer !</p></div><span class="arrow">›</span></a>
+            <a class="link-row" href="#"><span class="ic">🧩</span><div><h4>Join a Team</h4><p>Collaborez sur des projets</p></div><span class="arrow">›</span></a>
+            <a class="link-row" href="#"><span class="ic">💬</span><div><h4>Give Feedback</h4><p>Aidez-nous à nous améliorer</p></div><span class="arrow">›</span></a>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <div class="mark">❝</div>
+          <p>"The more you speak,<br>the better you become."</p>
+          <div class="cta-line">Keep talking. Keep growing.</div>
+        </div>
+
+        <div class="panel" id="poll">
+          <div class="panel-head"><h3>Weekly Poll</h3></div>
+          <p style="font-size:13px; color:var(--dim); margin-bottom:4px;">What would you like to do next?</p>
+          <div class="poll-options" id="pollOptions">
+            <label class="poll-option" data-opt="Debate"><span class="fill"></span><input type="radio" name="poll" value="Debate"><span>Debate</span><span class="pct"></span></label>
+            <label class="poll-option" data-opt="Presentation"><span class="fill"></span><input type="radio" name="poll" value="Presentation"><span>Presentation</span><span class="pct"></span></label>
+            <label class="poll-option" data-opt="Workshop"><span class="fill"></span><input type="radio" name="poll" value="Workshop"><span>Workshop</span><span class="pct"></span></label>
+            <label class="poll-option" data-opt="Game Night"><span class="fill"></span><input type="radio" name="poll" value="Game Night"><span>Game Night</span><span class="pct"></span></label>
+          </div>
+          <button class="btn btn-primary btn-block" id="voteBtn">Voter</button>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Useful Links</h3></div>
+          <a class="mini-link" href="#"><span class="ic">📋</span><div>Club Guidelines<small>Règles &amp; bonnes pratiques</small></div></a>
+          <a class="mini-link" href="#"><span class="ic">💭</span><div>Useful Expressions<small>For everyday use</small></div></a>
+          <a class="mini-link" href="#"><span class="ic">📚</span><div>Vocabulary of the Week<small>Enrich your vocabulary</small></div></a>
+          <a class="mini-link" href="mailto:flowtalk@iap.dz"><span class="ic">✉️</span><div>Contact the Club<small>flowtalk@iap.dz</small></div></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div class="footer-brand">
+      <img src="./assets/flowtalk-logo.jpeg" alt="IAP FlowTalk English Club">
+    </div>
+    <div class="footer-mid">
+      <p>Un espace d'échange et de pratique de l'anglais pour renforcer vos compétences linguistiques et développer votre potentiel.</p>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:flowtalk@iap.dz">✉️ flowtalk@iap.dz</a>
+      <span>📍 IAP – Hassi Messaoud</span>
+      <span>📞 +213 (0) 29 79 79 79</span>
+    </div>
+  </div>
+  <div class="footer-bottom container">© 2026 IAP FlowTalk English Club — Institut Algérien du Pétrole · Sonatrach</div>
+</footer>
+
+<script src="./js/db.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/auth.js"></script>
+<script src="./js/header-auth.js"></script>
+<script src="./js/theme-nav.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
