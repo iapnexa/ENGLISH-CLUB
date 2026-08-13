@@ -466,3 +466,207 @@ footer{
 a:focus-visible, button:focus-visible, .poll-option:focus-within{
   outline:2px solid var(--orange); outline-offset:2px; border-radius:6px;
 }
+
+/* =========================================================
+   REFERENCE DESIGN — IAP FlowTalk English Club
+   Optimized to match the supplied visual reference.
+   ========================================================= */
+:root{
+  --container: 1180px;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
+body{
+  background:#f8f6f2;
+  font-family:'Inter',Arial,sans-serif;
+}
+.reference-header{
+  position:relative;
+  background:#f8f6f2;
+  border-bottom:0;
+  box-shadow:none;
+  backdrop-filter:none;
+}
+.reference-header .top-bar{
+  height:78px;
+  padding-top:10px;
+}
+.reference-header .inst-brand img{height:52px;width:auto}
+.reference-header .inst-brand .t1{font-size:16px;letter-spacing:.01em}
+.reference-header .inst-brand .t2{font-size:12px}
+.reference-header .nav-links{gap:20px}
+.reference-header .nav-links a{font-size:12px;color:#25314a}
+.reference-header .icon-btn{background:#fff}
+
+.reference-hero{
+  padding:18px 0 26px;
+}
+.reference-hero .hero-grid{
+  grid-template-columns: 1.02fr .98fr;
+  gap:22px;
+  align-items:stretch;
+}
+.reference-hero .hero-grid > div:first-child{
+  padding:12px 8px 12px 22px;
+}
+.reference-hero .club-logo-row{
+  margin-bottom:12px;
+}
+.reference-hero .club-logo-row img{
+  width:min(390px,100%);
+  height:auto;
+  object-fit:contain;
+  object-position:left center;
+}
+.reference-hero .tagline-row{
+  font-size:15px;
+  margin:8px 0 8px 4px;
+}
+.reference-hero .hero-title{
+  font-size:clamp(38px,4.3vw,56px);
+  max-width:540px;
+  margin-top:12px;
+}
+.reference-hero .hero-title .accent{
+  color:#f2661f;
+  background:none;
+}
+.reference-hero .hero-grid > div:first-child > p{
+  font-size:14px!important;
+  max-width:500px!important;
+}
+.reference-hero .hero-actions{
+  margin-top:18px;
+}
+.reference-hero .hero-visual{
+  height:360px;
+  border-radius:0 0 0 115px;
+  overflow:hidden;
+  box-shadow:none;
+  background:#172337;
+}
+.reference-hero .hero-visual img,
+.reference-hero .hero-visual svg{
+  width:100%;height:100%;object-fit:cover;
+}
+.reference-hero .hero-visual::before{
+  content:"";
+  position:absolute;left:-1px;top:0;bottom:0;width:35%;
+  background:linear-gradient(110deg,#f8f6f2 0%,#f8f6f2 44%,transparent 45%);
+  z-index:2;
+  pointer-events:none;
+}
+.reference-hero .hero-visual::after{
+  background:linear-gradient(180deg,transparent 45%,rgba(10,17,28,.18));
+  z-index:1;
+}
+
+.dashboard{
+  padding:6px 0 42px;
+}
+.dash-grid{
+  grid-template-columns: 1.02fr 1fr .98fr;
+  gap:16px;
+  align-items:start;
+}
+.col{gap:14px}
+.dark-card{
+  border-radius:18px;
+  padding:22px;
+  background:#0c1720;
+  box-shadow:0 10px 28px rgba(13,20,32,.10);
+}
+.dark-card h3{font-size:17px;margin-bottom:10px}
+.dark-card .ic{width:34px;height:34px;border-radius:9px;font-size:16px}
+.dark-card p{font-size:12.5px;line-height:1.65;margin-bottom:13px}
+.check-list{gap:7px;margin-bottom:15px}
+.check-list li{font-size:12px}
+.check-list li::before{width:18px;height:18px;font-size:10px}
+.btn{padding:10px 18px;font-size:12px;border-radius:9px}
+.panel{
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 8px 22px rgba(22,35,63,.07);
+}
+.panel-head{margin-bottom:10px}
+.panel-head h3{font-size:15px}
+.panel-head .ic{width:28px;height:28px}
+.event-row{gap:10px;padding:10px 0}
+.event-date{width:48px;height:56px;border-radius:9px}
+.event-date b{font-size:16px}
+.event-info h4{font-size:12.5px}
+.event-info p{font-size:10.5px;line-height:1.45}
+.event-info .time{font-size:10px}
+.values-row{gap:6px}
+.value-item{padding:10px 4px}
+.value-item .ic{font-size:16px}
+.value-item span{font-size:10px}
+.value-item small{font-size:8.5px}
+
+.activities-grid{gap:8px}
+.activity-card{
+  padding:14px 10px;
+  border-radius:12px;
+  min-height:124px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.activity-card .ic{
+  width:38px;height:38px;border-radius:10px;font-size:17px;margin-bottom:8px
+}
+.activity-card h4{font-size:12px;margin-bottom:3px}
+.activity-card p{font-size:9.5px;line-height:1.4}
+.activity-card .hint{font-size:9px;margin-top:5px}
+.challenge-card{
+  border-radius:15px;
+  padding:14px;
+  margin-top:12px;
+}
+.challenge-card h3{font-size:13px}
+.challenge-card p{font-size:10px}
+.badge-row{gap:6px}
+.badge-circle{width:38px;height:38px;font-size:16px}
+
+.link-list{gap:0}
+.link-row{padding:8px 4px;gap:9px;border-bottom:1px solid rgba(35,46,69,.10)}
+.link-row:last-child{border-bottom:0}
+.link-row .ic{width:30px;height:30px;border-radius:8px;font-size:13px}
+.link-row h4{font-size:11.5px}
+.link-row p{font-size:9px}
+.quote-card{border-radius:16px;padding:18px}
+.quote-card .mark{font-size:22px}
+.quote-card p{font-size:14px}
+.quote-card .cta-line{font-size:10px}
+
+footer{
+  margin-top:12px;
+  padding:22px 0 14px;
+}
+.footer-row{gap:16px}
+.footer-brand img{height:36px}
+.footer-mid p,.footer-contact{font-size:10px}
+.footer-bottom{font-size:9px;margin-top:14px}
+
+@media(max-width:1050px){
+  .reference-header .nav-links{display:none}
+  .reference-header .burger{display:flex}
+  .reference-hero .hero-grid{grid-template-columns:1fr}
+  .reference-hero .hero-visual{height:300px;border-radius:18px}
+  .reference-hero .hero-visual::before{display:none}
+  .dash-grid{grid-template-columns:1fr 1fr}
+  .dash-grid > .col:last-child{grid-column:1/-1;grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .reference-header .top-bar{height:64px}
+  .reference-header .inst-brand .t1{font-size:12px}
+  .reference-header .inst-brand img{height:42px}
+  .reference-hero{padding-top:6px}
+  .reference-hero .hero-grid > div:first-child{padding:6px}
+  .reference-hero .club-logo-row img{width:310px}
+  .reference-hero .hero-title{font-size:38px}
+  .dash-grid{grid-template-columns:1fr}
+  .dash-grid > .col:last-child{grid-column:auto;grid-template-columns:1fr}
+}
