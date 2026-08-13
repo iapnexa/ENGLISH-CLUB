@@ -1,47 +1,63 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>IAP FlowTalk English Club</title>
-<meta name="description" content="IAP FlowTalk English Club — Speak, Learn, Connect, Grow">
 <link rel="icon" href="./sonatrach-mark.png">
-<style>
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#f7f4ef}
-body{font-family:Arial,Helvetica,sans-serif}
-.home{position:relative;width:min(100%,1044px);margin:0 auto}
-.home>img{display:block;width:100%;height:auto}
-.hit{position:absolute;display:block;z-index:5;border:0;background:transparent}
-.hit:focus-visible{outline:3px solid #f36a16}
-@media(max-width:650px){.hit{display:none}}
-/* Transparent navigation areas aligned to the supplied reference */
-.logo{left:2%;top:0;width:48%;height:30%}
-.about{left:1%;top:33%;width:32%;height:26%}
-.events{left:1%;top:59%;width:32%;height:28%}
-.activities{left:34%;top:31%;width:32%;height:56%}
-.join{left:66%;top:31%;width:33%;height:31%}
-.quote{left:66%;top:60%;width:33%;height:15%}
-.poll{left:66%;top:75%;width:17%;height:17%}
-.links{left:82%;top:75%;width:17%;height:17%}
-.footer-about{left:35%;top:92%;width:27%;height:8%}
-.contact{left:62%;top:92%;width:37%;height:8%}
-</style>
+<link rel="stylesheet" href="./main.css">
 </head>
 <body>
-<main class="home">
-<img src="./flowtalk-home-reference.png" alt="IAP FlowTalk English Club">
-<a class="hit logo" href="./index.html" aria-label="Accueil"></a>
-<a class="hit about" href="#about" aria-label="À propos du Club"></a>
-<a class="hit events" href="./activity.html" aria-label="Prochains événements"></a>
-<a class="hit activities" href="./activity.html" aria-label="Nos activités"></a>
-<a class="hit join" href="./login.html" aria-label="Rejoignez l'aventure"></a>
-<a class="hit quote" href="#inspiration" aria-label="Wall of Inspiration"></a>
-<a class="hit poll" href="#poll" aria-label="Weekly Poll"></a>
-<a class="hit links" href="#links" aria-label="Useful Links"></a>
-<a class="hit footer-about" href="#about" aria-label="À propos"></a>
-<a class="hit contact" href="mailto:flowtalk@iap.dz" aria-label="Contactez-nous"></a>
+<header class="site-header">
+  <div class="container top-bar">
+    <a class="inst-brand" href="./index.html">
+      <img src="./sonatrach-mark.png" alt="Sonatrach">
+      <div><div class="t1">Institut Algérien du Pétrole</div><div class="t2">Sonatrach • Groupe IAP</div></div>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">À propos</a><a href="#activities">Activités</a><a href="./activity.html">Événements</a><a href="#values">Nos valeurs</a><a href="./profile.html">Become a Member</a>
+    </nav>
+    <div class="nav-actions"><button class="burger" aria-label="Menu">☰</button></div>
+  </div>
+</header>
+
+<section class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="club-logo-row"><img src="./flowtalk-logo.jpeg" alt="IAP FlowTalk English Club"></div>
+   <div class="tagline-row"><b>Speak.</b> Learn. Connect. Grow.</div>
+   <h1 class="hero-title">Where oil flows,<br><span class="accent">ideas flow.</span></h1>
+  </div>
+  <div class="hero-visual"><img src="./hero-scene.svg" alt="Oil and energy landscape"></div>
+ </div>
+</section>
+
+<main class="dashboard">
+<div class="container dash-grid">
+ <div class="col">
+  <section id="about" class="dark-card">
+   <h3><span class="ic">◎</span> À propos du Club</h3>
+   <p>IAP FlowTalk English Club est un espace dédié aux stagiaires et au personnel de l'IAP pour pratiquer l'anglais, partager des idées et grandir ensemble.</p>
+   <ul class="check-list"><li>Pratiquer l’anglais en situation réelle</li><li>Développer la confiance à l’oral</li><li>Créer une communauté IAP dynamique</li></ul>
+   <a class="btn btn-primary btn-block" href="./profile.html">Rejoindre l’aventure →</a>
+  </section>
+  <section class="panel"><div class="panel-head"><h3><span class="ic">▣</span> Prochains événements</h3><a class="view-all" href="./activity.html">Voir tout →</a></div><div id="eventsList"></div></section>
+  <section id="values" class="panel"><div class="panel-head"><h3>Nos valeurs</h3></div><div class="values-row"><div class="value-item"><div class="ic">🌱</div><span>Progression</span><small>Chaque jour</small></div><div class="value-item"><div class="ic">🤝</div><span>Communauté</span><small>Ensemble</small></div><div class="value-item"><div class="ic">💡</div><span>Curiosité</span><small>Oser apprendre</small></div><div class="value-item"><div class="ic">🚀</div><span>Impact</span><small>Passer à l’action</small></div></div></section>
+ </div>
+
+ <div class="col">
+  <section id="activities" class="panel"><div class="panel-head"><h3><span class="ic">✦</span> Nos activités</h3><a class="view-all" href="./activity.html">Explorer →</a></div><div id="activitiesGrid" class="activities-grid"></div></section>
+  <section class="challenge-card"><div><h3>🏆 Challenge of the Month</h3><p>Speak for 2 minutes. Inspire the club.</p></div><div class="badge-row"><span class="badge-circle">🎤</span><span class="badge-circle">⭐</span></div></section>
+ </div>
+
+ <div class="col">
+  <section id="join" class="dark-card"><div class="panel-head"><h3><span class="ic">→</span> Rejoignez l’aventure</h3></div><p>Une communauté pour apprendre, pratiquer et partager.</p><div class="link-list"><a class="link-row" href="./profile.html"><span class="ic">👤</span><span><h4>Become a Member</h4><p>Créez votre profil</p></span><span class="arrow">›</span></a><a class="link-row" href="./trainers.html"><span class="ic">🎓</span><span><h4>For Trainers</h4><p>English for Trainers</p></span><span class="arrow">›</span></a></div></section>
+  <section class="quote-card" id="inspiration"><div class="mark">“</div><p>Small steps.<br>Big conversations.</p><div class="cta-line">Keep speaking.</div></section>
+  <section class="panel" id="poll"><div class="panel-head"><h3>🗳️ Weekly Poll</h3></div><p style="font-size:10px;color:var(--muted)">Quel format préférez-vous ?</p><div class="poll-options"><label class="poll-option" data-opt="Conversation"><input type="radio" name="poll" value="Conversation"><span class="fill"></span> Conversation <span class="pct"></span></label><label class="poll-option" data-opt="Quiz"><input type="radio" name="poll" value="Quiz"><span class="fill"></span> Quiz <span class="pct"></span></label><label class="poll-option" data-opt="Debate"><input type="radio" name="poll" value="Debate"><span class="fill"></span> Debate <span class="pct"></span></label></div><button id="voteBtn" class="btn btn-primary">Voter</button></section>
+  <section class="panel" id="links"><div class="panel-head"><h3>🔗 Useful Links</h3></div><a class="mini-link" href="./activity.html">📅 <span>Activities & Events<small>Programme du club</small></span></a><a class="mini-link" href="./profile.html">👤 <span>Member Area<small>Votre espace</small></span></a><a class="mini-link" href="./trainers.html">🎓 <span>Trainers<small>Ressources</small></span></a></section>
+ </div>
+</div>
 </main>
-<div id="about" hidden></div><div id="inspiration" hidden></div><div id="poll" hidden></div><div id="links" hidden></div>
-</body>
-</html>
+
+<footer><div class="container"><div class="footer-row"><div class="footer-brand"><img src="./flowtalk-logo.jpeg" alt="IAP FlowTalk"></div><div class="footer-mid"><p>Un espace IAP pour parler anglais, apprendre ensemble et transformer les conversations en opportunités.</p></div><div class="footer-contact"><strong>Contactez-nous</strong><span>flowtalk@iap.dz</span><span>IAP • Sonatrach</span></div></div><div class="footer-bottom">© 2026 IAP FlowTalk English Club • Institut Algérien du Pétrole</div></div></footer>
+<script src="./config.js"></script><script src="./db.js"></script><script src="./auth.js"></script><script src="./main.js"></script><script src="./theme-nav.js"></script><script src="./header-auth.js"></script>
+</body></html>
