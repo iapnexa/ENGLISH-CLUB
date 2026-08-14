@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion — IAP FlowTalk English Club</title>
+<meta name="theme-color" content="#0D1420">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/flowtalk-logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container top-bar">
+    <div class="inst-brand">
+      <img src="assets/sonatrach-mark.png" alt="Sonatrach">
+      <div>
+        <div class="t1">Institut Algérien du Pétrole</div>
+        <div class="t2">Hassi Messaoud</div>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#activities">Activités</a>
+      <a href="index.html#events">Événements</a>
+      <a href="trainers.html">Formation Formateurs</a>
+      <a href="index.html#join">Rejoindre</a>
+    </nav>
+    <div class="nav-actions">
+      <div id="authSlot"></div>
+      <button class="icon-btn" id="themeToggle" title="Dark / Light">🌙</button>
+      <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="auth-wrap">
+  <div class="auth-box">
+    <img src="assets/flowtalk-logo.jpeg" alt="IAP FlowTalk English Club">
+    <h2>Bienvenue !</h2>
+    <p class="sub">Connectez-vous ou créez votre profil membre en quelques secondes.</p>
+
+    <div class="role-choice" id="roleChoice">
+      <button type="button" class="role-card active" data-role="trainee">
+        <span class="ic">🧑‍🎓</span>
+        <b>Je suis Stagiaire</b>
+        <small>De passage à l'IAP pour une formation, puis retour à ma structure</small>
+      </button>
+      <button type="button" class="role-card" data-role="trainer">
+        <span class="ic">🎓</span>
+        <b>Formateur / Personnel IAP</b>
+        <small>En poste permanent à l'IAP</small>
+      </button>
+    </div>
+
+    <form id="authForm">
+      <div class="field">
+        <label for="nameInput">Nom complet</label>
+        <input id="nameInput" type="text" placeholder="Ex. Sarah Benali" required>
+      </div>
+      <div class="field">
+        <label for="emailInput">Adresse email</label>
+        <input id="emailInput" type="email" placeholder="vous@iap.dz" required>
+      </div>
+      <div class="field" id="structureField">
+        <label for="structureInput">Structure d'origine</label>
+        <input id="structureInput" type="text" placeholder="Ex. Sonatrach — Activité Amont, HMD">
+      </div>
+      <div class="form-error" id="authError">Merci de renseigner votre nom et votre email.</div>
+      <button type="submit" class="btn btn-primary btn-block" id="authSubmit">Continuer</button>
+    </form>
+    <p class="auth-note">Pas besoin de mot de passe : si votre email existe déjà, vous serez simplement reconnecté(e).</p>
+  </div>
+</main>
+
+<script src="js/db.js"></script>
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/header-auth.js"></script>
+<script src="js/theme-nav.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
